@@ -69,3 +69,17 @@ function sortearAmigo() {
     let resultado = document.getElementById("resultado");
     resultado.innerHTML = `🎉 El amigo secreto es: <strong>${amigoSorteado}</strong> 🎉`;
 }
+
+/**
+ * Función para reiniciar el sorteo
+ */
+function reiniciarSorteo() {
+    // Vaciar el array de amigos
+    amigos = [];
+
+    // Actualizar la lista en la interfaz
+    actualizarLista();
+
+    // Limpiar el resultado del sorteo
+    document.getElementById("resultado").innerHTML = "";
+}
