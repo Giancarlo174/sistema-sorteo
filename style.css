@@ -34,9 +34,12 @@ body {
 .header-banner {
     flex: 40%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px 0 0;
+    width: 100%; /* Ahora ocupa el ancho completo */
+    text-align: center;
 }
 
 /* Sección de entrada */
@@ -52,6 +55,7 @@ body {
     width: 100%;
 }
 
+
 /* Títulos */
 .main-title {
     font-size: 48px;
@@ -59,6 +63,14 @@ body {
     font-weight: 900;
     font-style: italic;
     color: var(--color-white);
+    flex: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+    width: 100%; /* Ahora ocupa el ancho completo */
+    text-align: center;
 }
 
 .section-title {
@@ -182,4 +194,66 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+/* 🔹 Ajustes para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 36px; /* Reducimos el tamaño del título */
+    }
+
+    .input-wrapper {
+        flex-direction: column; /* Apilamos los elementos en columnas */
+        align-items: center;
+    }
+
+    .reset-container {
+        margin-bottom: 10px; /* Agregamos espacio entre el botón de reinicio y el input */
+    }
+
+    .input-name {
+        width: 90%; /* Se reduce el ancho para evitar desbordes */
+        border-radius: 25px;
+    }
+
+    .button-add {
+        width: 90%;
+        margin-top: 5px; /* Separa el botón del input */
+        border-radius: 25px; /* Hace que el botón sea redondeado */
+    }
+
+    .button-draw {
+        width: 90%; /* Ajusta el botón de sorteo */
+    }
+}
+
+/* 🔹 Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 28px; /* Aún más pequeño para móviles */
+    }
+
+    .section-title {
+        font-size: 24px; /* Reducimos el tamaño del subtítulo */
+    }
+
+    .reset-icon {
+        width: 30px; /* Hacemos el icono de reinicio más pequeño */
+        height: 30px;
+    }
+
+    .input-name {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        border-radius: 25px;
+    }
+
+    .button-add {
+        width: 100%;
+        font-size: 14px; /* Reducimos el tamaño de fuente */
+    }
+
+    .button-draw {
+        width: 100%;
+        font-size: 14px;
+    }
 }
